@@ -1,0 +1,23 @@
+name: Crowdin Upload Action
+
+on:
+  push:
+    paths: [ 'docs/**' ]
+    branches: [ main ]
+
+jobs:
+  crowdin-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Crowdin push
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+          upload_translations: false
+          download_translations: false
+        env:
+          CROWDIN_PROJECT_ID: '699345'
+          CROWDIN_PERSONAL_TOKEN: '863d774893b2e4fd6356fdc9aad1cdcb48ba2c996791887ca5642f266992b33da18ce9c9e9f464b6'
