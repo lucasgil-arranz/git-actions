@@ -1,7 +1,9 @@
+#project_id_env: CROWDIN_PROJECT_ID
 project_id: '699345'
-#api_token_env: e0ff2f2b282c852ae3bc3408e2ed6b6f626a43c3ab6c1ead3edb261dce95283c4a9c92fba218e8b9
+#api_token_env: CROWDIN_PERSONAL_TOKEN
 api_token: '863d774893b2e4fd6356fdc9aad1cdcb48ba2c996791887ca5642f266992b33da18ce9c9e9f464b6'
 preserve_hierarchy: true
 files:
   - source: /docs/**/*
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
+    ignore : ['/docs/tutorial-extras/img/**/*']
